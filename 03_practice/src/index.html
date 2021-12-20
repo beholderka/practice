@@ -6,73 +6,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="calendar">
-    <div class="calendar__month">
-        <h1 class="calendar__head">August</h1>
+<main class="calendar">
+    <h1 class="calendar__head">August</h1>
+    <div class="week">
+        <span class="week__day--description">Sun</span>
+        <span class="week__day--description">Mon</span>
+        <span class="week__day--description">Tue</span>
+        <span class="week__day--description">Wed</span>
+        <span class="week__day--description">Thu</span>
+        <span class="week__day--description">Fri</span>
+        <span class="week__day--description">Sat</span>
     </div>
-    <div class="calendar__week-days">
-        <span>Sun</span>
-        <span>Mon</span>
-        <span>Tue</span>
-        <span>Wed</span>
-        <span>Thu</span>
-        <span>Fri</span>
-        <span>Sat</span>
+    <div class="week">
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">27</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">28</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">29</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">30</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">31</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">1</label>
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">2</label>
     </div>
-    <div class="calendar__days">
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="july27"><label class="calendar__days__inactive"  for="july27">27</label>
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="july28"><label class="calendar__days__inactive"  for="july28">28</label>
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="july29"><label class="calendar__days__inactive"  for="july29">29</label>
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="july30"><label class="calendar__days__inactive"  for="july30">30</label>
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="july31"><label class="calendar__days__inactive"  for="july27">31</label>
-         <input name="calendar" type="radio" id="august1"><label for="august1">1</label>
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august2"><label class="calendar__days__holiday"  for="august2">2</label>
+    <div class="week">
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">3</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">4</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">5</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">6</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">7</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">8</label>
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">9</label>
     </div>
-    <div class="calendar__days">
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august3"><label class="calendar__days__holiday"  for="august3">3</label>
-         <input name="calendar" type="radio" id="august4"><label for="august4">4</label>
-         <input name="calendar" type="radio" id="august5"><label for="august5">5</label>
-        <input name="calendar" type="radio" id="august6"><label for="august6">6</label>
-        <input name="calendar" type="radio" id="august7"><label for="august7">7</label>
-        <input name="calendar" type="radio" id="august8"><label for="august8">8</label>
-        <input name="calendar" type="radio"class="calendar__days__holiday" id="august9"><label class="calendar__days__holiday"  for="august9">9</label>
+    <div class="week">
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">10</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">11</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">12</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">13</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">14</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">15</label>
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">16</label>
     </div>
-    <div class="calendar__days">
-        <input name="calendar" type="radio"class="calendar__days__holiday" id="august10"><label class="calendar__days__holiday"  for="august10">10</label>
-        <input name="calendar" type="radio" id="august11"><label for="august11">11</label>
-        <input name="calendar" type="radio" id="august12"><label for="august12">12</label>
-        <input name="calendar" type="radio" id="august13"><label for="august13">13</label>
-        <input name="calendar" type="radio" id="august14"><label for="august14">14</label>
-        <input name="calendar" type="radio" id="august15"><label for="august15">15</label>
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august16"><label class="calendar__days__holiday"  for="august16">16</label>
+    <div class="week">
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">17</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">18</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">19</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">20</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">21</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">22</label>
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">23</label>
     </div>
-    <div class="calendar__days">
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august17"><label class="calendar__days__holiday"  for="august11">17</label>
-         <input name="calendar" type="radio" id="august18"><label for="august18">18</label>
-         <input name="calendar" type="radio" id="august19"><label for="august19">19</label>
-         <input name="calendar" type="radio" id="august20"><label for="august20">20</label>
-         <input name="calendar" type="radio" id="august21"><label for="august21">21</label>
-         <input name="calendar" type="radio" id="august22"><label for="august22">22</label>
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august23"><label class="calendar__days__holiday"  for="august23">23</label>
+    <div class="week">
+        <label tabIndex="0" class="week__day week__day--holiday week__day--celebrate"><input name="calendar" type="radio">24</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">25</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">26</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">27</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">28</label>
+        <label tabIndex="0" class="week__day"><input name="calendar" type="radio">29</label>
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">30</label>
     </div>
-    <div class="calendar__days">
-        <input name="calendar" type="radio" class="calendar__days__holiday calendar__days__celebrate" id="august24"><label   class="calendar__days__holiday calendar__days__celebrate" for="august24">24</label>
-         <input name="calendar" type="radio" id="august25"><label for="august25">25</label>
-         <input name="calendar" type="radio" id="august26"><label for="august26">26</label>
-         <input name="calendar" type="radio" id="august27"><label for="august27">27</label>
-         <input name="calendar" type="radio" id="august28"><label for="august28">28</label>
-         <input name="calendar" type="radio" id="august29"><label for="august29">29</label>
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august30"><label  class="calendar__days__holiday" for="august30">30</label>
+    <div class="week">
+        <label tabIndex="0" class="week__day week__day--holiday"><input name="calendar" type="radio">31</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">1</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">2</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">3</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">4</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">5</label>
+        <label tabIndex="0" class="disabled week__day"><input name="calendar" type="radio" class="disabled">6</label>
     </div>
-    <div class="calendar__days">
-        <input name="calendar" type="radio" class="calendar__days__holiday" id="august31"><label  class="calendar__days__holiday" for="august31">31</label>
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="september1"><label class="calendar__days__inactive"  for="september1">1</label>
-        <input name="calendar" type="radio" class="calendar__days__inactive" id="september2"><label class="calendar__days__inactive"  for="september2">2</label>
-        <input name="calendar" type="radio" id="september3" class="calendar__days__inactive"><label class="calendar__days__inactive" for="september3">3</label>
-        <input name="calendar" type="radio" id="september4" class="calendar__days__inactive"><label class="calendar__days__inactive" for="september4">4</label>
-        <input name="calendar" type="radio" id="september5" class="calendar__days__inactive"><label class="calendar__days__inactive" for="september5">5</label>
-        <input name="calendar" type="radio" id="september6" class="calendar__days__inactive"><label class="calendar__days__inactive" for="september6">6</label>
-    </div>
-</div>
+</main>
 </body>
 </html>
