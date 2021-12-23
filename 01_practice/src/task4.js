@@ -1,21 +1,23 @@
 function checkNumber(value) {
-    if (Number.isNaN( Number(value))) {
+
+    if (Number.isNaN(Number(value))) {
         return 'Incorrect input data';
     }
     let checkNumberStatus = [true, false, false];
+
     if (value > 1) {
         for (let i = 2; i < value; i++)
-            if (value % i === 0) checkNumberStatus[0] = false;
+            if (value % i === 0) {
+                checkNumberStatus[0] = false;
+            }
     } else {
         checkNumberStatus[0] = false;
     }
-    if (value % 2 === 0) {
-        checkNumberStatus[1] = true;
-    }
-    if (value % 10 === 0) {
-        checkNumberStatus[2] = true;
-    }
+
+    checkNumberStatus[1] = value % 2 === 0;
+    checkNumberStatus[2] = value % 10 === 0;
+
     return checkNumberStatus;
 }
 
-module.exports.checkNumber=checkNumber;
+module.exports.checkNumber = checkNumber;

@@ -1,6 +1,7 @@
-
 function calcSum(strNumA, numB) {
-    if (Number.isNaN( Number(strNumA)) || typeof strNumA !== 'string') {
+
+    if ((Number.isNaN(Number(strNumA)) || typeof strNumA !== 'string')
+        || typeof numB !== 'number') {
         return 'Incorrect input data';
     }
     if (numB % 3 === 0
@@ -13,4 +14,4 @@ function calcSum(strNumA, numB) {
 
 // console.log(calcSum('12', 15))
 
-module.exports.calcSum=calcSum;
+module.exports.calcSum = calcSum;

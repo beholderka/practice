@@ -28,4 +28,7 @@ describe ('calcSum',function () {
     test('null+15', () => {
         expect(calcSum(null,15)).toBe('Incorrect input data');
     });
+    test('"1"+"15"', () => {
+        expect(calcSum(1,"15")).toBe('Incorrect input data');
+    });
 });
