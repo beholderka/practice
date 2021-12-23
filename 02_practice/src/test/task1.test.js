@@ -1,5 +1,19 @@
-const {functionOne} = require('../task1');
+const {functionOne, multipleNum} = require('../task1');
 
+describe('multipleNum', function () {
+    test('12', () => {
+        expect(multipleNum(12)).toBe('three');
+    })
+    test('15', () => {
+        expect(multipleNum(15)).toBe('threeFive');
+    })
+    test('5', () => {
+        expect(multipleNum(5)).toBe('five');
+    })
+    test('"5"', () => {
+        expect(multipleNum('5')).toBe(false);
+    })
+})
 
 describe('functionOne', function () {
 

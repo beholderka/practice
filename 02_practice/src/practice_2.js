@@ -11,30 +11,28 @@ function functionTwo() {
     return result;
 }
 
-
 function multipleNum(value) {
-    let temp = '';
-    if (value % 3 === 0) {
-        temp = 'three'
+
+    if (typeof value !== 'number') {
+        return false;
     }
-    if (value % 5 === 0) {
-        if (temp === '') {
-            temp = 'five'
-        } else {
-            temp = temp + 'Five'
-        }
-    }
-    if (temp === '') {
-        return value;
-    } else {
-        return temp;
-    }
+
+    if (value % 3 === 0 && value % 5 === 0) {
+        return 'threeFive';
+    } else if (value % 3 === 0) {
+        return 'three'
+    } else if (value % 5 === 0) {
+        return 'five'
+    } else return value;
 }
 
+
 function functionOne(n) {
+
     if (typeof n !== 'number') {
         return false;
     }
+
     let result = '';
     for (let i = 1; i <= n; i++) {
         result = result + multipleNum(i) + '\n';
@@ -44,14 +42,14 @@ function functionOne(n) {
 
 
 function functionThree(str1, str2) {
+
     if (typeof str1 !== 'string' && typeof str2 !== 'string')
         return false;
-    str1 = str1.replace(/[^a-zа-яё][^0-9]/gi, '');
-    str2 = str2.replace(/[^a-zа-яё][^0-9]/gi, '');
-    str1 = str1.toLowerCase().split("").sort().join("");
-    str2 = str2.toLowerCase().split("").sort().join("");
-    return str1 === str2;
+
+    return str1.replace(/[^a-zа-яё][^0-9]/gi, '').toLowerCase().split("").sort().join("")
+        === str2.replace(/[^a-zа-яё][^0-9]/gi, '').toLowerCase().split("").sort().join("");
 }
+
 
 // console.log(functionOne(15));
 // console.log(functionTwo());

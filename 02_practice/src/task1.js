@@ -1,22 +1,21 @@
-
 function multipleNum(value) {
-    let temp = '';
-    if (value % 3 === 0) {
-        temp = 'three'
+    if (typeof value !== 'number') {
+        return false;
     }
-    if (value % 5 === 0) {
-        if (temp === '') {
-            temp = 'five'
-        } else {
-            temp = temp + 'Five'
-        }
+    if (value % 3 === 0 && value % 5 === 0) {
+        return 'threeFive';
     }
-    if (temp === '') {
-        return value;
-    } else {
-        return temp;
+
+    else if (value % 3 === 0) {
+        return 'three'
     }
+
+    else if (value % 5 === 0) {
+        return 'five'
+    } else return value;
 }
+
+module.exports.multipleNum = multipleNum;
 
 function functionOne(n) {
     if (typeof n !== 'number') {
