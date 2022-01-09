@@ -1,18 +1,18 @@
-const {validDataPassword, findChar} = require('../task2');
+const {validDataPassword, findSpecialChar} = require('../task2');
 
-describe ('findChar',function () {
+describe ('findSpecialChar',function () {
 
     test('""', () => {
-        expect(findChar('')).toBe(false);
+        expect(findSpecialChar('')).toBe(false);
     });
     test('1333', () => {
-        expect(findChar(1333)).toBe(false);
+        expect(findSpecialChar(1333)).toBe(false);
     });
     test('null', () => {
-        expect(findChar(null)).toBe(false);
+        expect(findSpecialChar(null)).toBe(false);
     });
     test('"sdf3%:"', () => {
-        expect(findChar('sdf3%:')).toBe(true);
+        expect(findSpecialChar('sdf3%:')).toBe(true);
     });
 });
 

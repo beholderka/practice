@@ -1,20 +1,27 @@
-function findChar(str) {
-    return [' ', '!', ':', '-', '?', '.', ','].some((char) => String(str).includes(char));
+function findSpecialChar(passwordString) {
+    return [' ', '!', ':', '-', '?', '.', ','].some((char) => String(passwordString).includes(char));
 }
 
-module.exports.findChar = findChar;
-function validDataPassword(str) {
+module.exports.findSpecialChar = findSpecialChar;
 
-    if (typeof str === "string") {
+function validDataPassword(passwordString) {
+    if (typeof passwordString === "string") {
 
-        if (findChar(str) && (str[0].toUpperCase() === str[0])
-            && (str.length > 2 && str.length < 20) && !findChar(str[0])) {
+        const isValidateLengthPas = passwordString.length > 2 && passwordString.length < 20;
+        const firstCharPas = isValidateLengthPas && passwordString[0];
+        const hasSpecialCharPas = findSpecialChar(passwordString);
+
+        if (isValidateLengthPas && hasSpecialCharPas &&
+            (firstCharPas.toUpperCase() === firstCharPas)
+            && !findSpecialChar(firstCharPas) ) {
+
             return 'VALID';
         } else {
+
             return 'INVALID';
         }
-
     } else {
+
         return 'Incorrect input data';
     }
 }
