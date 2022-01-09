@@ -4,25 +4,33 @@
 */
 
 function isEqual(object1, object2) {
-    if (!(typeof object1 === 'object' && typeof object2 === 'object')
-        || (Array.isArray(object1) && Array.isArray(object2))) {
+    if (!(typeof object1 === 'object' && typeof object2 === 'object'))
+         {
         return false;
     } else if ((object1 === null) && (object2 === null)
         || ((JSON.stringify(object1) === '{}') && (JSON.stringify(object2) === '{}'))) {
         return true;
     }
 
+    let result = false;
+
     const props1 = Object.getOwnPropertyNames(object1);
     const props2 = Object.getOwnPropertyNames(object2);
-    let result = false;
     const propsSymbol1 = Object.getOwnPropertySymbols(object1);
     const propsSymbol2 = Object.getOwnPropertySymbols(object2);
+
     const commonProps = props1.filter(el => props2.indexOf(el) > -1);
     const commonPropsSymbol = propsSymbol1.filter(el => propsSymbol2.indexOf(el) > -1);
 
-    if (commonProps.length > 0) {
+    if (props2.length > commonProps.length || props1.length > commonProps.length)
+        return false;
 
+    if (propsSymbol2.length > commonPropsSymbol.length || propsSymbol1.length > commonPropsSymbol.length)
+        return false;
+
+    if (commonProps.length > 0) {
         result = true;
+
         for (let item in commonProps) {
 
             if (typeof object1[commonProps[item]] === 'object') {
@@ -41,8 +49,6 @@ function isEqual(object1, object2) {
                 result = result && object1[commonPropsSymbol[item]] === object2[commonPropsSymbol[item]];
             }
         }
-    } else if (propsSymbol1.length > 0 || propsSymbol2.length > 0) {
-        result = false;
     }
 
     return result;

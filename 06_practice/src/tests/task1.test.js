@@ -17,10 +17,10 @@ describe('intersectionObject', function () {
         expect(intersectionObject({a: 2}, {a: 2})).toEqual({a: 2});
     });
     test('[ Symbol("id")]:1', function () {
-        expect(intersectionObject({a: 2,[ id]:1}, {a: 2,[ id]:1})).toEqual({a: 2,[ id]:1});
+        expect(intersectionObject({a: 2,[id]:1}, {a: 2,[ id]:1})).toEqual({a: 2,[id]:1});
     });
     test('[ Symbol("id")] ', function () {
-        expect(intersectionObject({a: 2,[ Symbol("id")]:1}, {a: 2,[ Symbol("id")]:1})).toEqual({a: 2});
+        expect(intersectionObject({a: 2,[Symbol("id")]:1}, {a: 2,[ Symbol("id")]:1})).toEqual({a: 2});
     });
 
     test('{a:2,b:1} {a:2}', function () {

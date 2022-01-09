@@ -7,11 +7,15 @@ describe('isEqual',function () {
     test('null null', function () {
         expect(isEqual(null,null)).toEqual(true);
     })
-    test('[],[]',function () {
-        expect(isEqual([],[])).toEqual(false);
-    })
     test('{},{}',function () {
         expect(isEqual({},{})).toEqual(true);
+    })
+
+    test('[]',function () {
+        expect(isEqual([],[])).toEqual(true);
+    })
+    test('[1,2,3]',function () {
+        expect(isEqual([1,2,3],[1,2,3])).toEqual(true);
     })
     test('{a:3},{b:1}',function () {
         expect(isEqual({a:3},{b:1})).toEqual(false);
@@ -25,8 +29,16 @@ describe('isEqual',function () {
         expect(isEqual({b:1,c:{a:2}},{b:1,c:{a:2}})).toEqual(true);
     })
 
-    test('{b:1,c:{b:2}},{b:1,c:{a:2}}',function () {
-        expect(isEqual({b:1,c:{b:2}},{b:1,c:{a:2}})).toEqual(false);
+    test('{b:1,c:{b:2}},{c:{b:2}}',function () {
+        expect(isEqual({b:1,c:{a:2}},{c:{a:2}})).toEqual(false);
+    })
+
+    test('{b:1,c:[1,2,3]},{b:1,c:[1,2,3]}',function () {
+        expect(isEqual({b:1,c:[1,2,3]},{b:1,c:[1,2,3]})).toEqual(true);
+    })
+
+    test('{b:1,c:[1,2,{d:1}]},{b:1,c:[1,2,{d:1}]}',function () {
+        expect(isEqual({b:1,c:[1,2,{d:1}]},{b:1,c:[1,2,{d:1}]})).toEqual(true);
     })
     test('{b:1,c:{b:2,[id]:2}},{b:1,c:{b:2,[id]:2}}',function () {
         expect(isEqual({b:1,c:{b:2,[id]:2}},{b:1,c:{b:2,[id]:2}})).toEqual(true);

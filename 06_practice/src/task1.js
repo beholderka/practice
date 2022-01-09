@@ -12,6 +12,7 @@ function intersectionObject(object1, object2) {
 
     const props1 = Object.getOwnPropertyNames(object1);
     const props2 = Object.getOwnPropertyNames(object2);
+
     const propsSymbol1 = Object.getOwnPropertySymbols(object1);
     const propsSymbol2 = Object.getOwnPropertySymbols(object2);
     let result = {};
@@ -22,7 +23,6 @@ function intersectionObject(object1, object2) {
         for (let item in commonProps) {
 
             if (object1[commonProps[item]] === object2[commonProps[item]]) {
-
                 result[commonProps[item]] = object2[commonProps[item]];
             }
         }
